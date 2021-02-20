@@ -6,7 +6,7 @@ import HomePage from "./HomePage";
 import TransactionPage from "./TransactionPage";
 
 const Main = () => {
-    const [navValue, setNavValue] = useState(2);
+    const [navValue, setNavValue] = useState(0);
 
     useEffect(() => {
         console.log("main", navValue);

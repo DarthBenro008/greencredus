@@ -8,6 +8,7 @@ import TransactionInit from "pages/TransactionInit";
 import Success from "pages/Success";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import Onboarding from "./pages/Onboarding";
 
 const theme = createMuiTheme({
     typography: {
@@ -21,10 +22,11 @@ const App = () => {
             <Switch>
                 <Route exact component={Login} path="/login" />
                 <Route exact component={OTP} path="/otp" />
-                <Route exact component={Main} path="/" />
+                <Route exact component={Main} path="/" />3
                 <Route exact component={Qr} path="/qr" />
                 <Route exact component={TransactionInit} path="/Transact" />
                 <Route exact component={Success} path="/success" />
+                <Route exact component={Onboarding} path="/ob" />
             </Switch>
         </ThemeProvider>
     );

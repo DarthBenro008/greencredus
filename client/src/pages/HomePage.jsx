@@ -84,8 +84,8 @@ const useStyles = makeStyles({
         fontSize: "24px",
     },
     qrBtn: {
-        height: "55px",
-        width: "55px",
+        height: "72px",
+        width: "72px",
         borderRadius: "50%",
         filter: "drop-shadow(0px 5.40984px 36.0656px rgba(62, 255, 162, 0.25))",
         background: "#3EFFA2",
@@ -93,8 +93,8 @@ const useStyles = makeStyles({
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
-        right: "5px",
-        bottom: "60px",
+        right: "8px",
+        bottom: "70px",
     },
 });
 

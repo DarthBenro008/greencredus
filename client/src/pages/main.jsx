@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import BottomNav from "components/BottomNav";
 import ProfilePage from "./ProfilePage";
 import HomePage from "./HomePage";
+import TransactionPage from "./TransactionPage";
 
 const Main = () => {
     const [navValue, setNavValue] = useState(0);
@@ -18,11 +19,11 @@ const Main = () => {
             ) : navValue === 1 ? (
                 <div>nav 1</div>
             ) : navValue === 2 ? (
-                <div>nav 2</div>
+                <TransactionPage />
             ) : navValue === 3 ? (
                 <ProfilePage />
             ) : null}
-            <BottomNav setNavValue={setNavValue} />
+            <BottomNav navValue={navValue} setNavValue={setNavValue} />
         </React.Fragment>
     );
 };

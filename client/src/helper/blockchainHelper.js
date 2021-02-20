@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { TezosNodeWriter, TezosParameterFormat } from "conseiljs";
 var key_name = "alpha";
 var key = require(`./${key_name}`);

@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import React, { useEffect, useState } from "react";
 
 import {
     Button,
@@ -7,7 +8,7 @@ import {
     TextField,
     Typography,
 } from "@material-ui/core";
-
+import { recaptchaVerifierInvisible, phoneSignIn } from "../utils/firebase";
 import LoginBG from "../assets/LoginBG.png";
 
 const useStyles = makeStyles({
@@ -124,8 +125,23 @@ const useStyles = makeStyles({
     },
 });
 
-const Login = () => {
+const Login = (props) => {
     const classes = useStyles();
+    const [region, setRegion] = useState("");
+    const [phone, setPhone] = useState("");
+    useEffect(() => {
+        recaptchaVerifierInvisible();
+    }, []);
+
+    const getPhoneNumber = () => {
+        return region + phone;
+    };
+
+    const moveToOtp = () => {
+        const phoneNumberUser = getPhoneNumber();
+        props.phone(phoneNumberUser);
+        props.moveUp();
+    };
 
     return (
         <div className={classes.loginPage}>
@@ -150,6 +166,9 @@ const Login = () => {
                     id="filled-basic"
                     variant="filled"
                     label="Country/Region"
+                    onChange={(event) => {
+                        setRegion(event.target.value);
+                    }}
                     InputProps={{ disableUnderline: true }}
                 />
                 <Divider variant="middle" className={classes.divider} />
@@ -158,10 +177,22 @@ const Login = () => {
                     id="filled-basic"
                     variant="filled"
                     label="Phone Number"
+                    onChange={(event) => {
+                        setPhone(event.target.value);
+                    }}
                     InputProps={{ disableUnderline: true }}
                 />
                 <Button
+                    id="sign-in-button"
                     className={classes.loginBtn}
+                    onClick={async () => {
+                        const userPhoneNumber = getPhoneNumber();
+                        console.log(userPhoneNumber);
+                        const results = await phoneSignIn(userPhoneNumber);
+                        if (results) {
+                            moveToOtp();
+                        }
+                    }}
                     variant="contained"
                     color="primary"
                 >

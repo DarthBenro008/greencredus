@@ -1,7 +1,11 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
+import usePWA from "react-pwa-install-prompt";
 
 export default function Download() {
-    useEffect(() => {
+    const { promptInstall, isInstallPromptSupported, isStandalone } = usePWA();
+
+    useEffect(async () => {
         let deferredPrompt;
 
         window.addEventListener("beforeinstallprompt", (e) => {
@@ -20,6 +24,18 @@ export default function Download() {
                 deferredPrompt = null;
             });
         });
+        const didInstall = await promptInstall();
+        if (didInstall) {
+            // User accepted PWA install
+        }
     }, []);
-    return <div>Your Download Must have started!</div>;
+
+    return (
+        <div>
+            Your Download Must have started!{" "}
+            {isInstallPromptSupported ? "True" : "False"}
+            {"\n"}
+            {isStandalone ? "Is standaalone" : "Is not standalone"}
+        </div>
+    );
 }

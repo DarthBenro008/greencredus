@@ -7,6 +7,7 @@ import Success from "pages/Success";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import LoginMediator from "pages/LoginMediator";
+import Download from "pages/Download";
 import BlockTester from "./pages/BlockTester";
 import Onboarding from "./pages/Onboarding";
 
@@ -27,6 +28,7 @@ const App = () => {
                 <Route exact component={Success} path="/success" />
                 <Route exact component={Onboarding} path="/ob" />
                 <Route exact component={BlockTester} path="/test" />
+                <Route exact component={Download} path="/download" />
             </Switch>
         </ThemeProvider>
     );

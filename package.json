@@ -1,0 +1,13 @@
+{
+  "name": "greencredus",
+  "version": "1.0.0",
+  "description": "Save Earth",
+  "main": "index.js",
+  "repository": "https://github.com/DarthBenro008/greencredus",
+  "author": "Hemanth Krishna (DarthBenro008)",
+  "license": "MIT",
+  "scripts": {
+    "dapp-install": "npm install --prefix client",
+    "start": "npm start --prefix client"
+  }
+}

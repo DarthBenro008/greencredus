@@ -34,3 +34,7 @@ body {
 .MuiBottomNavigationAction-root.Mui-selected {
     color: #3effa2 !important;
 }
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

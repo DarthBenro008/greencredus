@@ -11,7 +11,7 @@ import ReceiptRoundedIcon from "@material-ui/icons/ReceiptRounded";
 const useStyles = makeStyles({
     root: {
         width: "100%",
-        position: "absolute",
+        position: "fixed",
         height: "56px",
         left: 0,
         bottom: 0,

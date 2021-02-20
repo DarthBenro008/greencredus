@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         marginLeft: "0.5rem",
     },
     status: {
-        fontSize: "10px",
+        fontSize: "12px",
         lineHeight: "12px",
 
         marginLeft: "0.5rem",

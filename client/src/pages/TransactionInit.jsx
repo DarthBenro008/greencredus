@@ -167,7 +167,14 @@ const TransactionInit = () => {
                     </div>
                 </div>
             </div>
-            <Button className={c.payBtn} variant="contained" color="primary">
+            <Button
+                onClick={() => {
+                    window.location.href = "/success";
+                }}
+                className={c.payBtn}
+                variant="contained"
+                color="primary"
+            >
                 Confirm and pay
             </Button>
         </div>

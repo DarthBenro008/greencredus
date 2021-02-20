@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Switch, useHistory } from "react-router-dom";
 import Main from "pages/main";
 import Qr from "pages/qrPage";
 import TransactionInit from "pages/TransactionInit";
@@ -20,6 +20,15 @@ const theme = createMuiTheme({
 });
 
 const App = () => {
+    const history = useHistory();
+    const firstTime = localStorage.getItem("firstTime");
+    useEffect(() => {
+        if (firstTime !== "abc") {
+            history.push("/ob1");
+            localStorage.setItem("firstTime", "abc");
+        }
+    }, [firstTime, history]);
+
     return (
         <ThemeProvider theme={theme}>
             <Switch>

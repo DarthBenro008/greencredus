@@ -64,6 +64,8 @@ const OB2 = () => {
                 <Button
                     onClick={() => {
                         // do something to remove onboarding
+                        history.push("/");
+                        localStorage.setItem("firstTime", "abc");
                     }}
                     style={{ color: "#fbfbfb" }}
                     variant="text"

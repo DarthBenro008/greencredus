@@ -12,6 +12,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import LoginMediator from "pages/LoginMediator";
 import BlockTester from "./pages/BlockTester";
 import Onboarding from "./pages/Onboarding";
+import DesktopView from "pages/DesktopView";
 
 const theme = createMuiTheme({
     typography: {
@@ -22,12 +23,18 @@ const theme = createMuiTheme({
 const App = () => {
     const history = useHistory();
     const firstTime = localStorage.getItem("firstTime");
+
     useEffect(() => {
         if (firstTime !== "abc") {
             history.push("/ob1");
             localStorage.setItem("firstTime", "abc");
         }
     }, [firstTime, history]);
+
+    const width = window.innerWidth;
+    if (width > 500) {
+        return <DesktopView />;
+    }
 
     return (
         <ThemeProvider theme={theme}>

@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import React, { Component } from "react";
 import QrReader from "react-qr-scanner";
 
@@ -40,6 +41,16 @@ class Qr extends Component {
                     onScan={this.handleScan}
                 />
                 <p>{result}</p>
+                <Button
+                    onClick={() => {
+                        window.location.href = "/transact";
+                        localStorage.setItem("receiverId", "hehe");
+                    }}
+                    variant="contained"
+                    color="primary"
+                >
+                    Pay
+                </Button>
             </div>
         );
     }

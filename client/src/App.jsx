@@ -4,6 +4,7 @@ import Login from "pages/Login";
 import OTP from "pages/otp";
 import Main from "pages/main";
 import Qr from "pages/qrPage";
+import TransactionInit from "pages/TransactionInit";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 
@@ -21,6 +22,7 @@ const App = () => {
                 <Route exact component={OTP} path="/otp" />
                 <Route exact component={Main} path="/" />
                 <Route exact component={Qr} path="/qr" />
+                <Route exact component={TransactionInit} path="/Transact" />
             </Switch>
         </ThemeProvider>
     );

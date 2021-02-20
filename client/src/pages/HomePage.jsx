@@ -1,11 +1,12 @@
 /* eslint-disable no-nested-ternary */
-import React from "react";
+import React, { useState } from "react";
 import { Button, makeStyles, Typography } from "@material-ui/core";
 import profileImg from "../assets/profile-img.png";
 import recycle from "../assets/recycle.svg";
 import info from "../assets/info.svg";
 import coin from "../assets/coin.svg";
 import qrIcon from "../assets/qrIcon.png";
+import InfoModal from "components/InfoModal";
 
 const useStyles = makeStyles({
     homeTop: {
@@ -23,7 +24,6 @@ const useStyles = makeStyles({
     name: {
         fontSize: "20px",
         lineHeight: "24px",
-
         marginLeft: "0.5rem",
     },
     status: {
@@ -101,6 +101,12 @@ const useStyles = makeStyles({
 const Main = () => {
     const c = useStyles();
 
+    const [showInfoModal, setInfoModal] = useState(false);
+
+    const toggleInfoModal = () => {
+        setInfoModal(!showInfoModal);
+    };
+
     return (
         <div className="page">
             <div className={c.homeTop}>
@@ -115,7 +121,14 @@ const Main = () => {
                     </div>
                 </div>
                 <div>
-                    <img className={c.homeTopIcon} src={info} alt="" />
+                    <img
+                        onClick={() => {
+                            toggleInfoModal();
+                        }}
+                        className={c.homeTopIcon}
+                        src={info}
+                        alt=""
+                    />
                     <img className={c.homeTopIcon} src={recycle} alt="" />
                 </div>
             </div>
@@ -152,6 +165,7 @@ const Main = () => {
             </Button>
             <hr style={{ width: "326px", border: "1px solid #2B2B2B" }} />
 
+            {showInfoModal ? <InfoModal /> : null}
             <div className={c.qrBtn}>
                 <img src={qrIcon} alt="" />
             </div>

@@ -67,14 +67,14 @@ const useStyles = makeStyles({
         borderRadius: "15px 15px 0px 0px",
         width: "295px",
         // height: "60px",
-        padding: "1rem",
+        // padding: "1rem",
     },
     textboxBottom: {
         background: "#FBFBFB",
         borderRadius: "0px 0px 15px 15px",
         width: "295px",
         // height: "60px",
-        padding: "1rem",
+        // padding: "1rem",
     },
     divider: {
         margin: "0 12px",
@@ -147,14 +147,16 @@ const Login = () => {
                 </Typography>
                 <TextField
                     className={classes.textboxTop}
-                    id="standard-basic"
+                    id="filled-basic"
+                    variant="filled"
                     label="Country/Region"
                     InputProps={{ disableUnderline: true }}
                 />
-                <Divider light variant="middle" className={classes.divider} />
+                <Divider variant="middle" className={classes.divider} />
                 <TextField
                     className={classes.textboxBottom}
-                    id="standard-basic"
+                    id="filled-basic"
+                    variant="filled"
                     label="Phone Number"
                     InputProps={{ disableUnderline: true }}
                 />

@@ -113,6 +113,8 @@ const Main = () => {
         setInfoModal(!showInfoModal);
     };
 
+    const onPayClick = () => {};
+
     return (
         <div className="page">
             <div className={c.homeTop}>
@@ -166,7 +168,12 @@ const Main = () => {
                 </div>
             </div>
 
-            <Button className={c.payBtn} variant="contained" color="primary">
+            <Button
+                onClick={onPayClick}
+                className={c.payBtn}
+                variant="contained"
+                color="primary"
+            >
                 <b>Pay</b>
             </Button>
             <hr style={{ width: "326px", border: "1px solid #2B2B2B" }} />

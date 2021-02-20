@@ -14,6 +14,9 @@ body {
     height: 100vh;
     background: #121212;
     color: #fbfbfb;
+    background-image: url("./assets/bgGradient.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .page {

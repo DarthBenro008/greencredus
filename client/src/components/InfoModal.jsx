@@ -20,9 +20,15 @@ const useStyles = makeStyles({
         display: "flex",
         flexDirection: "column",
         alignItems: "baseline",
+        overflowY: "scroll",
     },
     title: { fontSize: "24px", lineHeight: "29px", marginTop: "1rem" },
-    close: { background: "#3EFFA2", borderRadius: "7px", alignSelf: "center" },
+    close: {
+        background: "#3EFFA2",
+        borderRadius: "7px",
+        alignSelf: "center",
+        marginBottom: "1rem",
+    },
 });
 
 const InfoModal = ({ toggleInfoModal }) => {
@@ -39,26 +45,19 @@ const InfoModal = ({ toggleInfoModal }) => {
                 Certain amount of credits will be provided each month to every
                 individual.
                 <br /> <br />
-                Certain amount of credits will be provided each month to every
-                individual.Certain amount of credits will be provided each month
-                to every individual.
+                After paying cash, scan the QR code present at the shops and
+                stations, to facilitate transaction.
                 <br /> <br />
-                Certain amount of credits will be provided each month to every
-                individual.
+                Once credits get exhausted,you won’t be able to buy any new
+                commodities. In that situation, you may have to wait till next
+                month.
                 <br /> <br />
-                Certain amount of credits will be provided each month to every
-                individual.Certain amount of credits will be provided each month
-                to every individual.
+                You can also gain credits by recycling products.
                 <br /> <br />
-                Certain amount of credits will be provided each month to every
-                individual.
+                Every user can transfer credits to every other user.
                 <br /> <br />
-                Certain amount of credits will be provided each month to every
-                individual.Certain amount of credits will be provided each month
-                to every individual.
-                <br /> <br />
-                Certain amount of credits will be provided each month to every
-                individual.
+                Get special badges for everytime you save carbon emission each
+                month.
                 <br /> <br />
             </div>
             <Button

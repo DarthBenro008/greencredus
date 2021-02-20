@@ -56,6 +56,12 @@ const useStyles = makeStyles({
         justifyContent: "space-evenly",
         width: "100%",
     },
+    rowSpaceBW: {
+        display: "flex",
+        justifyContent: "space-between",
+        width: "100%",
+        // margin: "0 1rem",
+    },
     rowNoSpace: {
         display: "flex",
         justifyContent: "center",
@@ -164,6 +170,18 @@ const Main = () => {
                 <b>Pay</b>
             </Button>
             <hr style={{ width: "326px", border: "1px solid #2B2B2B" }} />
+
+            <div>
+                <div className={c.rowSpaceBW}>
+                    <div style={{ paddingLeft: "1rem" }}>Recent Contacts</div>
+                    <div
+                        style={{ paddingRight: "1rem" }}
+                        className={c.greentext}
+                    >
+                        View More
+                    </div>
+                </div>
+            </div>
 
             {showInfoModal ? (
                 <InfoModal toggleInfoModal={toggleInfoModal} />

@@ -12,7 +12,6 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import LoginMediator from "pages/LoginMediator";
 import BlockTester from "./pages/BlockTester";
 import Onboarding from "./pages/Onboarding";
-import BlockTester from "./pages/BlockTester";
 
 const theme = createMuiTheme({
     typography: {

@@ -7,6 +7,7 @@ import info from "../assets/info.svg";
 import coin from "../assets/coin.svg";
 import qrIcon from "../assets/qrIcon.png";
 import InfoModal from "components/InfoModal";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
     homeTop: {
@@ -107,13 +108,17 @@ const useStyles = makeStyles({
 const Main = () => {
     const c = useStyles();
 
+    const history = useHistory();
+
     const [showInfoModal, setInfoModal] = useState(false);
 
     const toggleInfoModal = () => {
         setInfoModal(!showInfoModal);
     };
 
-    const onPayClick = () => {};
+    const onPayClick = () => {
+        history.push("/qr");
+    };
 
     return (
         <div className="page">
@@ -193,7 +198,7 @@ const Main = () => {
             {showInfoModal ? (
                 <InfoModal toggleInfoModal={toggleInfoModal} />
             ) : null}
-            <div className={c.qrBtn}>
+            <div onClick={onPayClick} className={c.qrBtn}>
                 <img src={qrIcon} alt="" />
             </div>
         </div>

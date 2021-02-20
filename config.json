@@ -1,0 +1,26 @@
+{
+    "compile_config": {
+        "contract_name": "demo.py",
+        "class_name": "FA12(admin = sp.address('tz1RGoWgci6h21xyEgfPJU9qkK4gpThiDN4n'))"
+    },
+    "test_config": {
+        "contract_name": "demo.py",
+        "test_name": "Welcome"
+    },
+    "deploy_config": {
+        "node": "https://testnet.tezster.tech",
+        "contract_code": "contract_build_compiled.tz",
+        "contract_storage": "contract_build_storage_init.tz",
+        "key": "alpha",
+        "amount": 100,
+        "delegate_address": "",
+        "fee": 1,
+        "derivation_path": "",
+        "storage_limit": 10000,
+        "gas_limit": 500000
+    },
+    "contract_interaction_config": {
+        "node": "https://testnet.tezster.tech",
+        "api-key": ""
+    }
+}

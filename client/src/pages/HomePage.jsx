@@ -165,7 +165,9 @@ const Main = () => {
             </Button>
             <hr style={{ width: "326px", border: "1px solid #2B2B2B" }} />
 
-            {showInfoModal ? <InfoModal /> : null}
+            {showInfoModal ? (
+                <InfoModal toggleInfoModal={toggleInfoModal} />
+            ) : null}
             <div className={c.qrBtn}>
                 <img src={qrIcon} alt="" />
             </div>

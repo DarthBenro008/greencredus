@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     close: { background: "#3EFFA2", borderRadius: "7px", alignSelf: "center" },
 });
 
-const InfoModal = () => {
+const InfoModal = ({ toggleInfoModal }) => {
     const c = useStyles();
 
     return (
@@ -61,7 +61,14 @@ const InfoModal = () => {
                 individual.
                 <br /> <br />
             </div>
-            <Button className={c.close} color="primary" variant="filled">
+            <Button
+                onClick={() => {
+                    toggleInfoModal();
+                }}
+                className={c.close}
+                color="primary"
+                variant="filled"
+            >
                 Close
             </Button>
         </div>

@@ -4,6 +4,7 @@ import BottomNav from "components/BottomNav";
 import ProfilePage from "./ProfilePage";
 import HomePage from "./HomePage";
 import TransactionPage from "./TransactionPage";
+import { Typography } from "@material-ui/core";
 
 const Main = () => {
     const [navValue, setNavValue] = useState(0);
@@ -17,7 +18,9 @@ const Main = () => {
             {navValue === 0 ? (
                 <HomePage />
             ) : navValue === 1 ? (
-                <div>nav 1</div>
+                <Typography style={{ padding: "2rem" }} variant="h6">
+                    Coming Soon...
+                </Typography>
             ) : navValue === 2 ? (
                 <TransactionPage />
             ) : navValue === 3 ? (

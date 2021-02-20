@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { Button, makeStyles, TextField, Typography } from "@material-ui/core";
 
@@ -5,6 +7,7 @@ import { useHistory } from "react-router-dom";
 import EditRoundedIcon from "@material-ui/icons/EditRounded";
 import LoginBG from "../assets/LoginBG.png";
 import back from "../assets/back.svg";
+import { verifyCode } from "../utils/firebase";
 
 const useStyles = makeStyles({
     loginPage: {
@@ -123,14 +126,16 @@ const useStyles = makeStyles({
     textboxOtp: { background: "#FBFBFB", borderRadius: "6px" },
 });
 
-const OTP = () => {
+const OTP = (props) => {
     const classes = useStyles();
 
     const [otpVerified, setOtpVerified] = useState(false);
-
+    const [otpInput, setOtpInput] = useState("");
     const history = useHistory();
 
     const verifyOtp = () => {
+        console.log(otpInput);
+        verifyCode(otpInput);
         setOtpVerified(true);
         setTimeout(() => {
             history.push("/");
@@ -158,7 +163,7 @@ const OTP = () => {
                     Enter OTP
                 </Typography>
                 <Typography variant="h6" className={classes.subHead}>
-                    OTP sent to +91 78XXXXX05
+                    OTP sent to {props.phoneNumber}
                     <EditRoundedIcon style={{ height: "16px" }} />
                 </Typography>
                 <TextField
@@ -166,6 +171,10 @@ const OTP = () => {
                     id="filled-basic"
                     label="OTP"
                     variant="filled"
+                    onChange={(event) => {
+                        event.preventDefault();
+                        setOtpInput(event.target.value);
+                    }}
                     InputProps={{ disableUnderline: true }}
                 />
                 {!otpVerified ? (

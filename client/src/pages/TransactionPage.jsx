@@ -49,7 +49,7 @@ const TransactionPage = () => {
                     id="date"
                     // label="Choose a date"
                     type="date"
-                    defaultValue={"2020-05-24"}
+                    defaultValue="2020-05-24"
                     className={c.textField}
                     InputLabelProps={{
                         shrink: true,
@@ -61,36 +61,36 @@ const TransactionPage = () => {
                 />
             </div>
             <TransactionCard
-                name={"Martina"}
-                credits={123}
-                item={"Meat"}
+                name="Martina"
+                credits={240}
+                item="Meat"
                 quantity={245}
                 date="26th February 2021"
-                carbon={"24"}
+                carbon="24"
             />
             <TransactionCard
-                name={"Martina"}
-                credits={123}
-                item={"Meat"}
+                name="Martina"
+                credits={230}
+                item="Meat"
                 quantity={245}
                 date="26th February 2021"
-                carbon={"24"}
+                carbon="24"
             />
             <TransactionCard
-                name={"Martina"}
-                credits={123}
-                item={"Meat"}
+                name="Martina"
+                credits={12}
+                item="Meat"
                 quantity={245}
                 date="26th February 2021"
-                carbon={"24"}
+                carbon="24"
             />
             <TransactionCard
-                name={"Martina"}
-                credits={123}
-                item={"Meat"}
+                name="Martina"
+                credits={14}
+                item="Meat"
                 quantity={245}
                 date="26th February 2021"
-                carbon={"24"}
+                carbon="24"
             />
         </div>
     );

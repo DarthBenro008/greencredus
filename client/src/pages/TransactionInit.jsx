@@ -10,6 +10,7 @@ import {
 import back from "../assets/back.svg";
 import profileImg from "../assets/transaction-profile-img.png";
 import coinLabel from "../assets/coin-label.png";
+import BlockChainHelper from "../helper/blockchainHelper";
 
 const useStyles = makeStyles({
     root: {
@@ -110,6 +111,25 @@ const TransactionInit = () => {
         setAge(event.target.value);
     };
 
+    const blockHelper = new BlockChainHelper();
+    const mintToken = async (amount, fromAddr) => {
+        const result = await blockHelper.mintToken(amount, fromAddr);
+        if (result.success) {
+            return true;
+        }
+        return false;
+    };
+
+    const handleResponse = async () => {
+        const results = await mintToken(
+            40,
+            "tz1RGoWgci6h21xyEgfPJU9qkK4gpThiDN4n"
+        );
+        if (results) {
+            window.location.href = "/success";
+        }
+    };
+
     const receiverId = localStorage.getItem("receiverId");
     console.log(receiverId);
     return (
@@ -135,15 +155,16 @@ const TransactionInit = () => {
                     input={<BootstrapInput />}
                 >
                     {/* <option aria-label="None" value="" /> */}
-                    <option value={"Petrol"}>Petrol</option>
-                    <option value={"Meat"}>Meat</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Meat">Meat</option>
                     {/* <option value={30}>Thirty</option> */}
                 </NativeSelect>
                 <div className={c.greenText}>Enter Quantity</div>
                 <BootstrapInput id="demo-customized-textbox" />
                 <div className={c.row}>
                     <div className={c.redText}>
-                        GRD to be deducted : <span className={c.num}>23</span>
+                        Gas Fee to be deducted :{" "}
+                        <span className={c.num}>2</span>
                         <span>
                             <img
                                 style={{ width: "10px" }}
@@ -169,7 +190,7 @@ const TransactionInit = () => {
             </div>
             <Button
                 onClick={() => {
-                    window.location.href = "/success";
+                    handleResponse();
                 }}
                 className={c.payBtn}
                 variant="contained"

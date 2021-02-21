@@ -32,7 +32,7 @@ const DesktopView = () => {
                 variant="h6"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://green-cred.us/"
+                href="https://www.green-cred.us/"
             >
                 Check us out here
             </a>

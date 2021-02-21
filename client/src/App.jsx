@@ -10,9 +10,9 @@ import OB3 from "pages/ob3";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import LoginMediator from "pages/LoginMediator";
+import DesktopView from "pages/DesktopView";
 import BlockTester from "./pages/BlockTester";
 import Onboarding from "./pages/Onboarding";
-import DesktopView from "pages/DesktopView";
 
 const theme = createMuiTheme({
     typography: {

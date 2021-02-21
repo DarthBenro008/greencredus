@@ -52,7 +52,7 @@ const Success = () => {
         <div className={c.root}>
             <img src={success} alt="" />
             <div className={c.successText}>
-                Payment of <b>23 GRD</b> was successful
+                Payment of <b>40 GRD</b> was successful
             </div>
             <div className={c.amt}>
                 123{" "}

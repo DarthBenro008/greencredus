@@ -19,6 +19,9 @@ class Qr extends Component {
         this.setState({
             result: data,
         });
+        if (data === "KT1AQqqKu29eC7hc6Q73unXMwgLCLPdMNo9T") {
+            window.location.href = "/transact";
+        }
     }
 
     // eslint-disable-next-line class-methods-use-this
@@ -39,6 +42,7 @@ class Qr extends Component {
                     style={previewStyle}
                     onError={this.handleError}
                     onScan={this.handleScan}
+                    facingMode="rear"
                 />
                 <p>{result}</p>
                 <Button

@@ -1,8 +1,6 @@
 # GreenCredUs
 
->The only currency that helps your to save your environment
-
-## KU Hackfest 2021
+>The only currency that helps to save environment
 
 ![Banner](assets/banner.png)
 

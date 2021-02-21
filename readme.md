@@ -27,7 +27,7 @@ You can check out the website [here](https://app.green-cred.us/).
 To get started:
 
 - Clone the repo.
-  `git clone https://github.com/IEEE-VIT/recruitment-2020-frontend.git`
+  `git clone https://github.com/DarthBenro008/greencredus.git`
 - Checkout to a new branch.
   `git checkout -b my-amazing-feature`
 - Make some amazing changes.
@@ -36,7 +36,7 @@ To get started:
 - `git push origin my-amazing-feature`
 - Open a pull request :)
 
-* For running this project successfully you'll need to create a `.env` file and store your firebase credentials there like following
+* For running this project successfully you'll need to create a `.env` file and store your firebase credentials there like following in the ./client folder
 
 ```
 REACT_APP_FIREBASE_API_KEY=

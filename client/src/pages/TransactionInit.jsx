@@ -122,7 +122,7 @@ const TransactionInit = () => {
 
     const handleResponse = async () => {
         const results = await mintToken(
-            12,
+            40,
             "tz1RGoWgci6h21xyEgfPJU9qkK4gpThiDN4n"
         );
         if (results) {
@@ -163,7 +163,8 @@ const TransactionInit = () => {
                 <BootstrapInput id="demo-customized-textbox" />
                 <div className={c.row}>
                     <div className={c.redText}>
-                        GRD to be deducted : <span className={c.num}>23</span>
+                        Gas Fee to be deducted :{" "}
+                        <span className={c.num}>2</span>
                         <span>
                             <img
                                 style={{ width: "10px" }}

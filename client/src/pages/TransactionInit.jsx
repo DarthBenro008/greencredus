@@ -167,7 +167,7 @@ const TransactionInit = () => {
                         <span className={c.num}>2</span>
                         <span>
                             <img
-                                style={{ width: "10px" }}
+                                style={{ width: "20px" }}
                                 src={coinLabel}
                                 alt=""
                             />
@@ -180,7 +180,7 @@ const TransactionInit = () => {
                         <span className={c.num}>153</span>
                         <span>
                             <img
-                                style={{ width: "10px" }}
+                                style={{ width: "20px" }}
                                 src={coinLabel}
                                 alt=""
                             />
